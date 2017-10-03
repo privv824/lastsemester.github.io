@@ -1,0 +1,56 @@
+<html>
+    <head>
+      <title>Responsive</title>
+      <style>
+        body {
+            font-size: 14px;
+        }
+        .circle {
+                background-color: yellow;
+                width: 100px;
+                height: 100px;
+                position: fixed;
+                top: 20px;
+                right: 150px;
+                border-radius: 50px;
+        }
+        .circle:hover {
+            background-color: lime;
+        }
+        .circle:active {
+            background-color: #afa; /* pastel green */
+        }
+        
+      @media screen and (max-width: 700px) {
+        body {
+            font-size: 2em; /* a slightly more tablet friendly font size */
+        }
+        .circle {
+          background-color: red;
+        }
+        .circle:hover {
+            background-color: magenta;
+        }
+        .circle:active {
+            background-color: pink;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        body {
+            background-color: #ffc; /* light yellow */
+            font-size: 3em;  /* mobile-friendly! */
+        }
+        .circle {
+          background-color: blue;
+        }
+        .circle:hover {
+            background-color: #0ff; /* bright blue */
+        }
+      }
+    </style>
+    </head>
+    <body>
+        Hello world.
+        <div class="colorblock"></div>
+    </body>
+</html>
