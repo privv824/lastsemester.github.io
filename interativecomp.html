@@ -1,0 +1,75 @@
+<html>
+    <style>
+        body{
+            background: #99efff;
+        }
+    </style>
+<head>
+  <title>Blue Color</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+  }
+  .example1, .example2, .example3 {
+     width: 100%; 
+     margin-bottom: 40px;
+  }
+  .rounded {
+    border-radius: 60px;
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+
+
+ 
+  <h3>Click the first blue box. </h3>
+  <div class="example1">
+    <span id="result">&nbsp;</span>
+    <div style="background-color:blue;"></div>
+    
+    <h3></h3> 
+  <div class="example3">
+    <div style="background-color:blue;"></div>
+  
+  <h3>Click the word</h3>
+  <div class="example2">
+    <div style="width: 500px">Avatar</div>
+  
+  
+  
+  
+  </div>
+  
+  </div>
+    
+  </div>
+
+  <script>
+  /* global $ */
+  
+  // Example one: get color of box on mouse click
+  $( ".example1 div" ).click(function() {
+    var color = $( this ).css( "background-color" );
+    $( "#result" ).html( "Blue like the color of the Na'vi people from Avatar" );
+  });
+  
+  /* global $ */
+  // Example three: prepend on click
+  $( ".example3 div" ).click(function() {
+    $( this ).prepend( "<img src='http://www.funnypart.com/pictures/FunnyPart-com-mr_bean_in_avatar.jpg'>" );
+  });
+  
+  // Example two: change text inside box on click
+  $( ".example2 div" ).click(function() {
+    $( this ).html( "Giant blue monster that has weird tail sex (keep clicking the photo and scroll down)" );
+  });
+  </script>
+   
+</body>
+</html>
