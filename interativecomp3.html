@@ -80,26 +80,53 @@
     </script>
     
 <head>
-    <script type="text/javascript">
-    ImageArray = new Array();
-    <img src="https://www.famousbirthdays.com/faces/johnson-dwayne-image.jpg">
-    <img src="https://www.staples-3p.com/s7/is/image/Staples/s0020805_sc7?$splssku$">
-    <img src="http://www2.fiskars.com/var/fiskars_amer/storage/images/frontpage2/products/crafting-and-sewing/scissors-and-shears/the-original-orange-handled-scissors-8/16933-31-eng-US/The-Original-Orange-Handled-Scissors-8_width300.jpg">
-    
-
-function getRandomImage() {
-    var num = Math.floor( Math.random() * 11);
-    var img = ImageArray[num];
-    document.getElementById("randImage").textContent = ('<img src="' + 'images/random/' + img + '" width="250px">')
-
-
-}
-</script>
-</head>
-<body onload="getRandomImage()">
-<div id="randImage"></div>
-</body>
-</div>
+ 
 
 </body>
+</html>
+<style>
+		    .box {
+		        width: 20px;
+		        height: 20px;
+		        margin: 2px;
+		        display: inline-block;
+		        background-color: green;
+		    }
+		    .ball {
+		        width: 20px;
+		        height: 20px;
+		        border-radius: 10px;
+		        position: relative;
+		        display: inline-block;
+		        background-color: orange;		        
+		    }
+		    .dot {
+		        width: 10px;
+		        height: 10px;
+		        border-radius: 5px;
+		        display: inline-block;
+		        background-color: blue;
+		    }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	   
+	    <div id="rockpaperscissors"><h3><img src='https://www.famousbirthdays.com/faces/johnson-dwayne-image.jpg'>
+	    <img src='https://www.staples-3p.com/s7/is/image/Staples/s0020805_sc7?$splssku$'>
+	    <img src='http://www2.fiskars.com/var/fiskars_amer/storage/images/frontpage2/products/crafting-and-sewing/scissors-and-shears/the-original-orange-handled-scissors-8/16933-31-eng-US/The-Original-Orange-Handled-Scissors-8_width300.jpg'></h3></div>
+		<script>
+	
+         // Example 5: pick random image from palette
+         var img = new Image(1);
+         img.src = "https://www.famousbirthdays.com/faces/johnson-dwayne-image.jpg";
+         var img = new Image(2);
+         img.src = "https://www.staples-3p.com/s7/is/image/Staples/s0020805_sc7?$splssku$";
+        img.src = "http://www2.fiskars.com/var/fiskars_amer/storage/images/frontpage2/products/crafting-and-sewing/scissors-and-shears/the-original-orange-handled-scissors-8/16933-31-eng-US/The-Original-Orange-Handled-Scissors-8_width300.jpg";
+         for (var i = 0; i < 50; i++) {
+            var hex = img[Math.floor(Math.random() * colorArray.length)];
+            $("#example5").append("<div class='box' style='background-color:" + hex + "';></div>");
+         }
+		</script>
+	</body>
 </html>
