@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Tell me about yourslef</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #e0958f;
+            }
+            
+        </style>
+        <h1> Tell me about yourself </h1>
+		<form id="pizza-form">
+		  <p><label id="name">What is your name? <input id="namefield" name="customer"></label></p>
+		  <p><label>What is your cellephone number? <input type="tel" name="phone"></label></p>
+		  <p><label>What is your email address? <input type="email" name="addr" placeholder="@newschool.edu"></label></p>
+		  <p><label>Whats your shoe size?:
+		      <select name="size">
+		        <option value="">choose size</option>
+		        <option value="men">(men) 9</option>
+		        <option value="men">(men) 9.5</option>
+		        <option value="men">(men) 10</option>
+		        <option value="men">(men) 10.5</option>
+		        <option value="men">(men) 11</option>
+		        <option value="men">(men) 11.5</option>
+		        <option value="men">(men) 12</option>
+		        <option value="men">(men) 12.5</option>
+		        <option value="women">(women) 5</option>
+		        <option value="women">(women) 5.5</option>
+		        <option value="women">(women) 6</option>
+		        <option value="women">(women) 6.5</option>
+		        <option value="women">(women) 7</option>
+		        <option value="women">(women) 7.5</option>
+		        <option value="women">(women) 8</option>
+		        <option value="women">(women) 8.5</option>
+		      </select>
+		    </label>
+		  </p><p><label>What is your favorite color?
+		      <input name="due" type="time" min="11:00" max="21:00" step="900">
+		  </label></p>
+		  <p><label>Do you like tacos?:
+		      <select name="answer">
+		        <option value="">Answer</option>
+		        <option value="yes">Yes</option>
+		        <option value="no">No</option>
+		 </select>
+		 </label>
+		  </p><p><label>What is your Social Security Number?
+		      <input name="due" type="time" min="11:00" max="21:00" step="900">
+		  <p><button onclick="store()" type="button">Send it</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>
