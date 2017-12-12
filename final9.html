@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Cupid Chat Room</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> Cupid Chat Room </h1>
+		<form id="pizza-form">
+		  <p><label id="name">Of all the Greek and Roman <input id="namefield" name="customer" placeholder="plural noun"></label></p>
+		  <p><label>Cupid, the god of <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>is certainly the best known. Almost anyone you meet, from a strangeron a/an <input type="email" name="addr" placeholder="noun"></label></p>
+		  <p><label>to a teenager in the  <input type="tel" name="phone" placeholder="verb ending in ing"></label></p>
+		  <p><label> mall, or even an alien from outer <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>knows about Cupid. They know him to be a scantily clad<input type="tel" name="phone" placeholder="noun"></label></p> 
+		  <p><label>with a pair of  <input type="tel" name="phone" placeholder="plural noun"></label></p> 
+		  <p><label>on his back and a bow and  <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>in his <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>They also know that if Cupid shoots a/an <input type="tel" name="phone" placeholder="noun"></label></p> 
+		  <p><label>into your <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>you automatically  <input type="tel" name="phone" placeholder="verb"></label></p>
+		  <p><label>in love with a member of the opposite <input type="tel" name="phone" placeholder="noun"></label></p>  
+		  <p><label>Even those scholars who don't think of Cupid as numero<input type="tel" name="spanish word" placeholder="animal"></label></p>  
+		  <p><label>will admit that he ranks up there with Zeus, god of <input type="tel" name="phone" placeholder="plural noun"></label></p>
+		  <p><label>Apollo, god of <input type="tel" name="phone" placeholder="plural noun"></label></p>
+		  <p><label> and <input type="tel" name="phone" placeholder="person in room"></label></p>
+		  <p><label>God of  <input type="tel" name="phone" placeholder="plural noun" ></label></p>
+		  <img src="http://www.freevectors.com/wp-content/uploads/2016/01/Funny-Naughty-Cupid-Set-Target.jpg" width="400" height="" alt="Photo of Milford Sound in New Zealand" />
+
+		    
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		   <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>

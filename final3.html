@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Pillow Fight</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> Pillow Fight </h1>
+		<form id="pizza-form">
+		  <p><label id="name">The last time I went to a sleepover, a/an <input id="namefield" name="customer" placeholder="adjective"></label></p>
+		  <p><label>pillow fight broke out. Out of nowhere <input type="tel" name="phone" placeholder="name"></label></p>
+		  <p><label>grabbed her <input type="email" name="addr" placeholder="adjective"></label></p>
+		  <p><label>fluffy  <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label> and began swinging it at anyone close to them. Soon, everyone else joined in! At one point, I got hit right in the back of my   <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>As soon as I recovered, I tossed my  <input type="tel" name="phone" placeholder="noun"></label></p> 
+		  <p><label>at  <input type="tel" name="phone" placeholder="name ('s)"></label></p> 
+		  <p><label> <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>but I missed. Instead, I knocked over an expensive <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>and my pillow split open! <input type="tel" name="phone" placeholder="plural noun"></label></p> 
+		  <p><label>flew everywhere, covering the room in a layer of  <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>feathers. The fighting stopped when we all broke out in   <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>laughter. The fun ended when we realized we had to clean up the  <input type="tel" name="phone" placeholder="adjective"></label></p>  
+		  <p><label>mess!</label></p>  
+		  <img src="http://dujye7n3e5wjl.cloudfront.net/photographs/1080-tall/time-100-influential-photos-harry-benson-pillow-fight-55.jpg" width="400" height="" alt="Photo of Milford Sound in New Zealand" />
+
+		  
+		 
+		    
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		   <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>

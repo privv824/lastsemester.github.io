@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>MAD LIBS</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> The World's Worst Bedtime Story </h1>
+		<form id="pizza-form">
+		  <p><label id="name">Once upon a time, in a place called <input id="namefield" name="customer" placeholder="a place"></label></p>
+		  <p><label>there was a <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>princess named <input type="email" name="addr" placeholder="name"></label></p>
+		  <p><label>Her kingdom was huge, but her <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label> was bigger. She was beautiful from her <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>to her <input type="tel" name="phone" placeholder="human organ"></label></p> 
+		  <p><label>One day she saw a  <input type="tel" name="phone" placeholder="adjective"></label></p> 
+		  <p><label>prince named <input type="tel" name="phone" placeholder="name"></label></p>
+		  <p><label>He had a  <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>face. As soon as his <input type="tel" name="phone" placeholder="body part"></label></p> 
+		  <p><label>touched her <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>they fell in love. They got married at  <input type="tel" name="phone" placeholder="a place"></label></p>
+		  <p><label>Not long after, they had a baby. They decided to name him/her <input type="tel" name="phone" placeholder="name"></label></p>  
+		  <p><label>The baby looked like a <input type="tel" name="phone" placeholder="animal"></label></p>  
+		  <p><label>there was a <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>The baby used to <input type="tel" name="phone" placeholder="verb"></label></p>
+		  <p><label> <input type="tel" name="phone" placeholder="number"></label></p>
+		  <p><label>times a day so that his/her <input type="tel" name="phone" placeholder="body part" ></label></p>
+		  <p><label>would be <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>and <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>And they  <input type="tel" name="phone" placeholder="verb (past tense)"></label></p>
+		  <p><label>happily ever after!</label></p>
+		   <img src="https://easydrawingguides-7512.kxcdn.com/wp-content/uploads/2017/04/How-to-draw-a-cartoon-castle-21.png" width="225" height="225" alt="Photo of Milford Sound in New Zealand" />
+
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		  <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+    		
+		</script>
+	</body>
+</html>

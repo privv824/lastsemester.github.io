@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>The Power of the Force</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> The Power of the Force </h1>
+		<form id="pizza-form">
+		  <p><label id="name">The Force is a mystical, <input id="namefield" name="customer" placeholder="adjective"></label></p>
+		  <p><label>power. As a Jedi Master Obi-Wan Kenobi said, "The Force is an energy field, created by all living <input type="tel" name="phone" placeholder="plural noun"></label></p>
+		  <p><label>that surroundsus, penetrates us, and binds the  <input type="email" name="addr" placeholder="noun"></label></p>
+		  <p><label>together." Using the power of the Force, a Jedi can do many <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label> things, like using the Force to exercise <input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>control over <input type="tel" name="phone" placeholder="adjective"></label></p> 
+		  <p><label>minded  <input type="tel" name="phone" placeholder="plural noun"></label></p> 
+		  <p><label>A Jedi can also use the Force to move objects with his or her<input type="tel" name="phone" placeholder="body part"></label></p>
+		  <p><label>It doesn't matter how<input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>these objects are; it only matters how <input type="tel" name="phone" placeholder="adjective"></label></p> 
+		  <p><label>the jedi believes in the Force. Most importanly, the Force teaches a jedi to rely on his or her feelings. As Obi-Wan Kenobi told his student, Luke <input type="tel" name="phone" placeholder="noun"></label></p>
+		   <img src="http://cdn.smosh.com/sites/default/files/2016/01/luke-theories-force-pull.gif" width="400" height="" alt="Photo of Milford Sound in New Zealand" />
+
+		    
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		   <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>

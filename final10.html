@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Comic Superhero Movie</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> Comic Superhero Movie </h1>
+		<form id="pizza-form">
+		  <p><label id="name">Meet our hero <input id="namefield" name="customer" placeholder="name"></label></p>
+		  <p><label>a super intelligent <input type="tel" name="phone" placeholder="profession"></label></p>
+		  <p><label>A run-in with the <input type="email" name="addr" placeholder="country"></label></p>
+		  <p><label>military leads him to create his alter-ego <input type="tel" name="phone" placeholder="silly name"></label></p>
+		  <p><label> a <input type="tel" name="phone" placeholder="color"></label></p>
+		  <p><label><input type="tel" name="phone" placeholder="adjective"></label></p> 
+		  <p><label>giant capable of great destruction. He <input type="tel" name="phone" placeholder="adverb"></label></p> 
+		  <p><label>battles the military with his girlfriend <input type="tel" name="phone" placeholder="name"></label></p>
+		  <p><label>Eventually it is discovered that our hero's long-time colleague <input type="tel" name="phone" placeholder="name"></label></p>
+		  <p><label>distinguished by his <input type="tel" name="phone" placeholder="body part"></label></p> 
+		  <p><label>is trying to turn <input type="tel" name="phone" placeholder="name"></label></p>
+		  <p><label>into a weapon, leading to a climactic battle in downtown <input type="tel" name="phone" placeholder="city"></label></p>
+		  <p><label>with an evil version of the same giant alter-ego called  <input type="tel" name="phone" placeholder="another silly name"></label></p>  
+		  <p><label>Eventually the enemy is subdued by  <input type="tel" name="phone" placeholder="verb ending ing"></label></p>  
+		  <p><label>him with a  <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>In the final reel, <input type="tel" name="phone" placeholder="former badass actor"></label></p>
+		  <p><label> appears to propose joining him in a <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <img src="http://www.vitamin-ha.com/wp-content/uploads/2012/07/VH-funny-superheroes.jpg" width="400" height="" alt="Photo of Milford Sound in New Zealand" />
+		    
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		   <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>

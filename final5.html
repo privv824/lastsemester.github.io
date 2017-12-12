@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>Merry Chrsitmas from the Siglers</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> Merry Christmas from the Siglers </h1>
+		<form id="pizza-form">
+		  <p><label id="name">It has been quite a  <input id="namefield" name="customer" placeholder="adjective"></label></p>
+		  <p><label>year for our family.  <input type="tel" name="phone" placeholder="name"></label></p>
+		  <p><label>continues to build his marketing business and has the privilege to ride his <input type="email" name="addr" placeholder="vehicle"></label></p>
+		  <p><label>to work every day, something he's been doing since he was twelve. <input type="tel" name="new name" placeholder="new name"></label></p>
+		  <p><label> is frequently found in her sewing room. Sometimes she is even <input type="tel" name="phone" placeholder="verb ending in ing"></label></p>
+		  <p><label>Recently she learned how to make gingerbread <input type="tel" name="phone" placeholder="food"></label></p> 
+		  <p><label>When  <input type="tel" name="phone" placeholder="new name"></label></p> 
+		  <p><label>isn't busy working on her <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>applications she can be found upstairs  <input type="tel" name="phone" placeholder="verb ending in ing"></label></p>
+		  <p><label>violin, everything from Pachelbel to Henry Mancini.<input type="tel" name="phone" placeholder="new name ('s)"></label></p> 
+		  <p><label> <input type="tel" name="phone" placeholder="type of music"></label></p>
+		  <p><label>band practices at our house every Sunday. He loves vinyl records and currently has over  <input type="tel" name="phone" placeholder="number"></label></p>
+		  <p><label>songs in his iTunes library.  <input type="tel" name="phone" placeholder="pet name"></label></p>  
+		  <p><label>and  <input type="tel" name="phone" placeholder="pet name"></label></p>  
+		  <p><label>don't have to much to say, but they too wish you a Merry Christmas <input type="tel" name="phone" placeholder="adjective"></label></p>
+		 <img src="https://i.pinimg.com/736x/56/45/f6/5645f6d32460e6422fd112096630e1de--punkrock-funny-family-photos.jpg" width="400" height="450" alt="Photo of Milford Sound in New Zealand" />
+
+		    
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		   <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>

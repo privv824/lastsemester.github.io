@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>An Awkward Encounter</title>
+		<style>
+			
+			form {
+				font-family: Arial;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	    <style>
+            body {
+                background-color: #white;
+            }
+            
+        </style>
+        <h1> An Awkward Encounter </h1>
+		<form id="pizza-form">
+		  <p><label id="name">After <input id="namefield" name="customer" placeholder="verb ending in ing"></label></p>
+		  <p><label>shotguns at the range, drinking <input type="tel" name="phone" placeholder="type of liquid"></label></p>
+		  <p><label>by the pool, and a big <input type="email" name="addr" placeholder="type of food"></label></p>
+		  <p><label>dinner, this is turning out to be a/an <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label> night. I'm at some bar called the <input type="tel" name="phone" placeholder="noun"></label></p>
+		  <p><label>lounge, and I am <input type="tel" name="phone" placeholder="adjective"></label></p> 
+		  <p><label>smashed right now. We have  <input type="tel" name="phone" placeholder="noun"></label></p> 
+		  <p><label>service in a/an <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>VIP area, but there are no girls here. Well, I'm the groom, so I think I'll go  <input type="tel" name="phone" placeholder="verb"></label></p>
+		  <p><label>some up. I can't <input type="tel" name="phone" placeholder="adverb"></label></p> 
+		  <p><label>see anything with all the flashing <input type="tel" name="phone" placeholder="plural noun"></label></p>
+		  <p><label>in this club, but I think there's a group of  <input type="tel" name="phone" placeholder="plural noun"></label></p>
+		  <p><label>in that corner. Hmmm. . . there's a brunette over there . . . I can't see her face, but boy does she have great  <input type="tel" name="phone" placeholder="part of body"></label></p>  
+		  <p><label>I'll ask her if she and her friends want to join us for a round of  <input type="tel" name="phone" placeholder="plural noun"></label></p>  
+		  <p><label>"Excuse me, but we have <input type="tel" name="phone" placeholder="adjective"></label></p>
+		  <p><label>booze and no one to share it with. Want to join us?" I say. She turns around and smiles at me. "Yes <input type="tel" name="phone" placeholder="male name"></label></p>
+		  <p><label> we'd love to join you," she says. <input type="tel" name="phone" placeholder="exclamation"></label></p>
+		  <p><label>I must be the only groom in the  <input type="tel" name="phone" placeholder="a place" ></label></p>
+		  <p><label>to hit on his own fiancee during his bachelor party.</label></p>
+		 <img src="http://uploads.poplyft.com/wp-content/uploads/2016/01/01202209/bach-574x322.jpg" width="400" height="" alt="Photo of Milford Sound in New Zealand" />
+
+		    
+		      <p><label>Rating:
+		      <select name="size">
+		        <option value="">Rate</option>
+		        <option value="Life Changing">Life Changing</option>
+		        <option value="Amazing">Amazing</option>
+		        <option value="Great">Great</option> 
+		        <option value="Good">Good</option> 
+		        <option value="OK">OK</option> 
+		        <option value="Terrible">Terrible</option> 
+		        <option value="Go Home You're Drunk">Go Home You're Drunk</option> 
+		  
+		   <button onclick="clearData()" type="button">Clear data</button></p>
+		  <p><button onclick="store()" type="button">Save for later</button>
+		  <button onclick="clearData()" type="button">Clear it</button></p>
+		</form>
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>
